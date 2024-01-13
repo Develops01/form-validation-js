@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="myForm" onsubmit="validateForm(event)">
+      <label for="name">نام:</label>
+      <input
+        minlength="5"
+        type="text"
+        placeholder="بیشتر از 5 حرف"
+        id="name"
+        name="name"
+        required
+      />
+
+      <label for="familyName">نام خانوادگی:</label>
+      <input
+        minlength="5"
+        type="text"
+        placeholder="بیشتر از 5 حرف"
+        id="familyName"
+        name="familyName"
+        required
+      />
+
+      <label for="phoneNumber">شماره موبایل:</label>
+      <input
+        type="tel"
+        id="phoneNumber"
+        name="phoneNumber"
+        pattern="[0-9]{11}"
+        placeholder="شماره تلفن به انگلیسی شامل 0 یعنی 11 عدد"
+        required
+      />
+
+      <label for="title">عنوان:</label>
+      <input type="text" id="title" name="title" required />
+
+      <label for="text">متن:</label>
+      <textarea id="text" name="text" rows="4" required></textarea>
+
+      <input type="submit" value="ارسال" />
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
